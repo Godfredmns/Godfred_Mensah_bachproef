@@ -15,37 +15,47 @@
 \section{Inleiding}%
 \label{sec:inleiding}
 
-Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
+In de afgelopen jaren is het aantal data dat organisaties beheren in hedendaagse bedrijfsapplicaties aanzienlijk gestegen, waardoor de nood aan een doordacht en gestructureerd datakwaliteitsbeheer steeds sterker naar voren komt. Binnen veel ondernemingen speelt SAP Master Data Governance een centrale rol in het vastleggen en controleren van masterdata over verschillende domeinen heen, maar het tijdig detecteren van fouten en inconsistenties blijft een uitdaging doordat traditionele validatiemechanismen vaak gebaseerd zijn op statische regels en beperkte context. Ook binnen Alluvion, waar SAP MDG wordt ingezet in verschillende projecten, komt deze uitdaging duidelijk naar voren. Binnen het vakgebied groeit daarom de interesse in artificiële intelligentie, dat in staat is patronen en afwijkingen te identificeren die met klassieke validatieregels moeilijk te herkennen zijn. Daarom onderzoekt dit voorstel hoe AI praktisch kan worden ingezet om de datakwaliteit binnen SAP MDG te ondersteunen
 
-\begin{itemize}
-  \item kaderen thema
-  \item de doelgroep
-  \item de probleemstelling en (centrale) onderzoeksvraag
-  \item de onderzoeksdoelstelling
-\end{itemize}
+\subsection{Probleemstelling}
+Hoewel SAP Master Data Governance (SAP MDG) organisaties ondersteunt bij het centraal beheren en controleren van masterdata, blijft het in de praktijk moeilijk om de kwaliteit van deze gegevens op een consistente manier te bewaken. In projecten waar Alluvion SAP MDG inzet, blijkt dat veel data manueel wordt ingevoerd door verschillende gebruikers, waardoor velden soms onvolledig, onnauwkeurig of inconsistent zijn. Daarnaast komen gegevens vaak uit meerdere externe bronnen, wat leidt tot verschillen in structuur en kwaliteit. De bestaande validatieregels, die meestal gebaseerd zijn op vaste BRF+ regels, kunnen alleen fouten herkennen die vooraf expliciet zijn vastgelegd. Hierdoor blijven subtiele fouten of nieuwe foutpatronen onopgemerkt, wat extra controles en aanpassingen vereist. Deze uitdagingen tonen aan dat er nood is aan een flexibelere manier om fouten sneller en nauwkeuriger te identificeren dan momenteel mogelijk is met de beschikbare validatiemiddelen.
+\subsection{Hoofdonderzoeksvraag}
+Dit onderzoek vertrekt vanuit de volgende centrale onderzoeksvraag:
+\begin{quote}
+    \textbf{Hoe kan artificiële intelligentie bijdragen tot een hogere datakwaliteit en automatische foutdetectie binnen SAP Master Data Governance?}
+\end{quote}
+\subsection{Deelvragen}
 
-Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
+Om deze centrale onderzoeksvraag te beantwoorden, worden zowel deelvragen geformuleerd binnen het \textbf{probleemdomein} als binnen het \textbf{oplossingsdomein}. Deze helpen om het probleem grondig te analyseren en de gepaste oplossingsrichtingen te onderzoeken.
 
-De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
+\subsubsection{Deelvragen binnen het probleemdomein}
 
-Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
+\begin{enumerate}
+    \item Welke soorten fouten, inconsistenties en anomalieën komen het vaakst voor in master data binnen SAP MDG?
+    \item Hoe gebeurt validatie van master data momenteel binnen SAP MDG en welke beperkingen brengen de huidige validatiemechanismen met zich mee?
+    \item Welke impact hebben foutieve of onvolledige master data op bedrijfsprocessen?
+\end{enumerate}
 
-Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
+\subsubsection{Deelvragen binnen het oplossingsdomein}
+
+\begin{enumerate}
+    \item Welke AI-technieken zijn geschikt voor foutdetectie en anomaliedetectie in gestructureerde masterdata?
+    \item Hoe kan een AI-model worden getraind en geëvalueerd op basis van historische of synthetische data?
+    \item In welke mate kunnen AI-modellen bijdragen tot automatische dataverrijking met behulp van externe bronnen?
+    \item Hoe verhoudt de performantie van een AI-model zich tot klassieke SAP-validatieregels op het vlak van nauwkeurigheid en betrouwbaarheid?
+\end{enumerate}
+
+\subsection{Onderzoeksdoelstellingen}
+Het doel van dit onderzoek is te bepalen in welke mate AI-technieken een meerwaarde kunnen bieden ten opzichte van traditionele validatiebenaderingen. Concreet worden verschillende modellen onderzocht die fouten, inconsistenties en anomalieën in vendor master data automatisch kunnen identificeren en, waar mogelijk, gegevens kunnen verrijken met behulp van externe bronnen.
+
+Deze bachelorproef is geslaagd wanneer het ontwikkelde AI-model effectief foutdetectie kan uitvoeren met voldoende nauwkeurigheid, stabiliteit en betrouwbaarheid, en wanneer overtuigend kan worden aangetoond dat deze aanpak een meetbare meerwaarde biedt ten opzichte van bestaande validatieregels.
+
 
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{Literatuurstudie}%
 \label{sec:literatuurstudie}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
-
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
-
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
-
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
-
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
 
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
@@ -54,31 +64,63 @@ Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle no
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
+Uit studies blijkt dat organisaties vaak problemen hebben met fouten in masterdata. Deze fouten ontstaan door manuele invoer, verschillende databronnen of onduidelijke processen. Traditionele validatie werkt meestal met vaste regels en kan daardoor alleen fouten vinden die vooraf zijn bepaald \autocite{rahm2000data}. Onderzoek toont dat zulke regels weinig flexibel zijn en moeilijk omgaan met nieuwe of onverwachte fouten \autocite{ebraheem2018distributed}. Andere studies geven aan dat klassieke controles vooral eenvoudige fouten vinden, maar minder geschikt zijn voor inhoudelijke of complexe inconsistenties \autocite{batini2009methodologies}.
+
+In de literatuur wordt artificiële intelligentie voorgesteld als een manier om fouten beter op te sporen. AI kan patronen en afwijkingen herkennen zonder dat hiervoor vooraf regels moeten worden gemaakt \autocite{chandola2009anomaly}. Verschillende studies tonen dat AI-technieken beter zijn in het vinden van subtiele of ongebruikelijke fouten dan klassieke validatiesystemen \autocite{aggarwal2015outlier}. Ook blijkt dat deep-learningmodellen fouten in gegevens in tabelvorm kunnen ontdekken die met gewone regels moeilijk zichtbaar zijn \autocite{hulsebos2019sherlock}.
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+Het onderzoek wordt uitgevoerd in verschillende fasen die samen moeten aantonen of artificiële intelligentie kan helpen bij het verbeteren van datakwaliteit binnen SAP MDG.
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+\begin{itemize}
+    \item \textbf{Fase 1: Analyse van het huidige validatieproces}
+    \begin{itemize}
+        \item In kaart brengen welke fouten vaak voorkomen in masterdata.
+        \item Onderzoeken hoe SAP MDG en BRF+ deze fouten vandaag controleren.
+        \item De beperkingen van het huidige validatiekader identificeren.
+    \end{itemize}
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+    \item \textbf{Fase 2: Opstellen en voorbereiden van de dataset}
+    \begin{itemize}
+        \item Samenstellen van een geschikte dataset (synthetisch, geanonimiseerd of beide).
+        \item Data opschonen en voorbereiden zodat AI-modellen ermee kunnen werken.
+        \item Indien nodig fouten labelen voor evaluatie.
+    \end{itemize}
 
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
+    \item \textbf{Fase 3: Het verkennen en kiezen van AI-technieken}
+    \begin{itemize}
+        \item Onderzoeken welke AI-methoden geschikt zijn voor foutdetectie.
+        \item Selecteren van één of meerdere modellen om te testen.
+    \end{itemize}
 
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
+    \item \textbf{Fase 4: Trainen en evalueren van het AI-model}
+    \begin{itemize}
+        \item Het gekozen model trainen op de voorbereide dataset.
+        \item Prestaties meten met metrics zoals nauwkeurigheid, precisie, recall en F1-score.
+        \item Resultaten vergelijken met traditionele SAP-validatieregels.
+    \end{itemize}
 
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+    \item \textbf{Fase 5: Uitwerken van een proof-of-concept}
+    \begin{itemize}
+        \item Een demonstratie maken die laat zien hoe het AI-model fouten opspoort.
+        \item Nagaan of de aanpak praktisch toepasbaar is binnen een SAP-omgeving.
+    \end{itemize}
+
+    \item \textbf{Fase 6: Analyse en conclusie}
+    \begin{itemize}
+        \item De resultaten samenvatten en interpreteren.
+        \item Vaststellen in welke situaties AI een meerwaarde biedt.
+        \item Beperkingen en mogelijke verbeterpunten bespreken.
+    \end{itemize}
+\end{itemize}
+
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
+Het verwachte eindresultaat van deze bachelorproef is een AI-model dat fouten in masterdata beter kan vinden dan de huidige validatieregels in SAP MDG. Het model zou verschillende soorten fouten moeten kunnen herkennen, ook wanneer deze niet vooraf in regels zijn vastgelegd. Daarom wordt verwacht dat de AI-aanpak hogere scores haalt op metingen zoals precisie, recall en F1-score. Dit kan leiden tot minder manuele controles, efficiëntere dataverwerking en betrouwbaardere gegevens voor verdere bedrijfsprocessen. De aanpak is niet beperkt tot één soort masterdata en kan in verschillende delen van SAP MDG worden toegepast.
 
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
-
+Op basis van de metingen en vergelijkingen zal het onderzoek duidelijk maken hoeveel meerwaarde AI biedt voor foutdetectie. Als de AI-modellen beter presteren dan de bestaande validatieregels, laat dit zien dat AI een nuttige aanvulling kan zijn op het huidige datakwaliteitsproces. Als de resultaten minder sterk zijn dan verwacht, biedt dit inzicht in de beperkingen van deze aanpak en welke voorwaarden nodig zijn om AI succesvol toe te passen. In beide gevallen levert dit onderzoek waardevolle inzichten op voor organisaties die hun datakwaliteit willen verbeteren en vormt het een basis voor toekomstige uitbreidingen.
