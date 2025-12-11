@@ -64,9 +64,12 @@ Deze bachelorproef is geslaagd wanneer het ontwikkelde AI-model effectief foutde
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Uit studies blijkt dat organisaties vaak problemen hebben met fouten in masterdata. Deze fouten ontstaan door manuele invoer, verschillende databronnen of onduidelijke processen. Traditionele validatie werkt meestal met vaste regels en kan daardoor alleen fouten vinden die vooraf zijn bepaald \autocite{rahm2000data}. Onderzoek toont dat zulke regels weinig flexibel zijn en moeilijk omgaan met nieuwe of onverwachte fouten \autocite{ebraheem2018distributed}. Andere studies geven aan dat klassieke controles vooral eenvoudige fouten vinden, maar minder geschikt zijn voor inhoudelijke of complexe inconsistenties \autocite{batini2009methodologies}.
+Uit studies blijkt dat organisaties vaak problemen hebben met fouten in masterdata. Deze fouten ontstaan onder andere door manuele invoer, verschillende databronnen of onduidelijke processen. 
+Traditionele validatie werkt meestal met vaste regels en kan daardoor enkel fouten vinden die vooraf zijn vastgelegd \autocite{rahm2000data}. Studies tonen dat zulke regels weinig flexibel zijn en moeilijk reageren op nieuwe of onverwachte fouten \autocite{ebraheem2018distributed}. 
+Andere onderzoeken geven aan dat klassieke controles vooral eenvoudige fouten opsporen en minder geschikt zijn voor complexere afwijkingen \autocite{batini2009methodologies}. Ook binnen systemen zoals SAP MDG blijkt dat regelgebaseerde validatie niet altijd voldoende is, vooral wanneer data verandert of afhankelijk is van context \autocite{kumar2023sapmdg}.
+Daarnaast wijzen internationale rapporten erop dat de groei van datavolumes de nood verhoogt aan automatische foutdetectie, omdat manuele of statische controles niet langer schaalbaar zijn \autocite{paris2024ai}.
 
-In de literatuur wordt artificiële intelligentie voorgesteld als een manier om fouten beter op te sporen. AI kan patronen en afwijkingen herkennen zonder dat hiervoor vooraf regels moeten worden gemaakt \autocite{chandola2009anomaly}. Verschillende studies tonen dat AI-technieken beter zijn in het vinden van subtiele of ongebruikelijke fouten dan klassieke validatiesystemen \autocite{aggarwal2015outlier}. Ook blijkt dat deep-learningmodellen fouten in gegevens in tabelvorm kunnen ontdekken die met gewone regels moeilijk zichtbaar zijn \autocite{hulsebos2019sherlock}.
+In recente literatuur wordt artificiële intelligentie vaak genoemd als een mogelijke oplossing voor datakwaliteitsproblemen. AI kan afwijkingen herkennen zonder dat vooraf regels moeten worden opgesteld \autocite{chandola2009anomaly}. Verschillende studies tonen dat AI beter is in het opsporen van subtiele of ongebruikelijke fouten dan traditionele methoden \autocite{aggarwal2015outlier}. Deep-learningmodellen blijken ook goed in staat om fouten in tabelvormige data, zoals masterdata, te detecteren \autocite{hulsebos2019sherlock}. Nieuwe onderzoeken bevestigen dat moderne modellen, zoals neural networks voor tabulaire data, vaak betere resultaten geven dan vaste validatieregels \autocite{borisov2024deep}. Overzichtsstudies tonen dat AI steeds vaker wordt gebruikt om inconsistenties, vreemde waarden en dubbele records automatisch op te sporen \autocite{tamm2024data}. Ook industriële bronnen geven aan dat organisaties AI steeds vaker inzetten om datakwaliteit sneller en betrouwbaarder te verbeteren \autocite{firsteigen2023}. Deze inzichten tonen dat AI een waardevolle aanvulling kan zijn op bestaande validatiemechanismen binnen SAP MDG.
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
@@ -91,7 +94,7 @@ Het onderzoek wordt uitgevoerd in verschillende fasen die samen moeten aantonen 
 
     \item \textbf{Fase 3: Het verkennen en kiezen van AI-technieken}
     \begin{itemize}
-        \item Onderzoeken welke AI-methoden geschikt zijn voor foutdetectie.
+        \item Onderzoeken welke AI-methoden dat geschikt zijn voor foutdetectie.
         \item Selecteren van één of meerdere modellen om te testen.
     \end{itemize}
 
@@ -104,7 +107,7 @@ Het onderzoek wordt uitgevoerd in verschillende fasen die samen moeten aantonen 
 
     \item \textbf{Fase 5: Uitwerken van een proof-of-concept}
     \begin{itemize}
-        \item Een demonstratie maken die laat zien hoe het AI-model fouten opspoort.
+        \item Een POC maken die laat zien hoe het AI-model fouten opspoort.
         \item Nagaan of de aanpak praktisch toepasbaar is binnen een SAP-omgeving.
     \end{itemize}
 
@@ -121,6 +124,6 @@ Het onderzoek wordt uitgevoerd in verschillende fasen die samen moeten aantonen 
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Het verwachte eindresultaat van deze bachelorproef is een AI-model dat fouten in masterdata beter kan vinden dan de huidige validatieregels in SAP MDG. Het model zou verschillende soorten fouten moeten kunnen herkennen, ook wanneer deze niet vooraf in regels zijn vastgelegd. Daarom wordt verwacht dat de AI-aanpak hogere scores haalt op metingen zoals precisie, recall en F1-score. Dit kan leiden tot minder manuele controles, efficiëntere dataverwerking en betrouwbaardere gegevens voor verdere bedrijfsprocessen. De aanpak is niet beperkt tot één soort masterdata en kan in verschillende delen van SAP MDG worden toegepast.
+Het verwachte resultaat van deze bachelorproef is een AI-model dat fouten in masterdata beter kan opsporen dan de huidige validatieregels in SAP MDG. Het model zou verschillende soorten fouten moeten kunnen herkennen, ook wanneer deze niet vooraf in regels zijn vastgelegd. Daardoor wordt verwacht dat de AI-aanpak hogere scores behaalt bij metingen zoals precisie, recall en F1-score. Dit kan helpen om het aantal manuele controles te verminderen, processen sneller te laten verlopen en gegevens betrouwbaarder te maken. De methode is niet beperkt tot één type masterdata en kan in meerdere onderdelen van SAP MDG worden toegepast.
 
-Op basis van de metingen en vergelijkingen zal het onderzoek duidelijk maken hoeveel meerwaarde AI biedt voor foutdetectie. Als de AI-modellen beter presteren dan de bestaande validatieregels, laat dit zien dat AI een nuttige aanvulling kan zijn op het huidige datakwaliteitsproces. Als de resultaten minder sterk zijn dan verwacht, biedt dit inzicht in de beperkingen van deze aanpak en welke voorwaarden nodig zijn om AI succesvol toe te passen. In beide gevallen levert dit onderzoek waardevolle inzichten op voor organisaties die hun datakwaliteit willen verbeteren en vormt het een basis voor toekomstige uitbreidingen.
+Aan de hand van de metingen en vergelijkingen zal het onderzoek aantonen hoeveel meerwaarde AI kan bieden bij foutdetectie. Wanneer de AI-modellen beter presteren dan de huidige validatieregels, wijst dit erop dat AI een bruikbare aanvulling kan zijn binnen het datakwaliteitsproces. Als de resultaten minder goed zijn dan verwacht, geeft dit inzicht in de beperkingen van de gekozen aanpak en in de voorwaarden die nodig zijn om AI in de toekomst wel succesvol toe te passen. In beide gevallen levert het onderzoek waardevolle informatie op voor organisaties die hun datakwaliteit willen verbeteren en kan het dienen als basis voor verdere uitbreidingen of nieuwe toepassingen.
